@@ -87,6 +87,8 @@
         </dependency>
 
         <!-- Testing dependencies -->
+
+
         <dependency>
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-junit5</artifactId>
