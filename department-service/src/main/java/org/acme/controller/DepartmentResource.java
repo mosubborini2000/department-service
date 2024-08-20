@@ -4,7 +4,7 @@ import jakarta.inject.Inject;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import org.acme.model.Department;
-import service.DepartmentService;
+import org.acme.service.DepartmentService;
 import java.util.List;
 
 @Path("/departments")
@@ -29,5 +29,10 @@ public class DepartmentResource {
     @GET
     public List<Department> getAllDepartments() {
         return departmentService.getAllDepartments();
+    }
+    @GET
+    @Path("/by-name/{name}")
+    public Department getDepartmentByName(@PathParam("name") String name) {
+        return departmentService.getDepartmentByName(name);
     }
 }
