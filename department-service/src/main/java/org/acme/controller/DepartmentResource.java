@@ -31,8 +31,10 @@ public class DepartmentResource {
         return departmentService.getAllDepartments();
     }
     @GET
-    @Path("/by-name/{name}")
+    @Path("/name/{name}")
     public Department getDepartmentByName(@PathParam("name") String name) {
         return departmentService.getDepartmentByName(name);
+        //put the dep name in postman
     }
+
 }
